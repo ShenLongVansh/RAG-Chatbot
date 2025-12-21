@@ -125,7 +125,7 @@ export function MessageList({ messages, isLoading, onSendSuggestion }: MessageLi
                                             }}
                                         >
                                             {/* Hover background gradient */}
-                                            <div className={`absolute inset-0 ${suggestion.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                                            <div className={`absolute inset-0 bg-gradient-to-r ${suggestion.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
                                             <span className="relative z-10 group-hover:text-white transition-colors duration-300">{suggestion.emoji}</span>
                                             <span className="relative z-10 hidden md:inline group-hover:text-white transition-colors duration-300">{suggestion.text}</span>

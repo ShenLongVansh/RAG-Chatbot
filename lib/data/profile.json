@@ -1,155 +1,107 @@
 {
     "name": "Vansh Sharma",
-    "title": "Full Stack Developer & AI Enthusiast",
-    "bio": "I'm a passionate software developer with expertise in building modern web applications and AI-powered solutions. I love creating elegant, user-friendly experiences that solve real-world problems.",
-    "location": "India",
-    "email": "vansh@example.com",
+    "title": "Full Stack Developer",
+    "bio": "I am a Full Stack Developer with a strong foundation in DevOps and Cloud Infrastructure. Currently bridging the gap between traditional web development and modern AI, I specialize in building intelligent applications using the MERN stack, Next.js, and Generative AI (RAG, Gemini). I have a proven track record of solving complex deployment challenges and winning university-level hackathons.",
+    "location": "Ghaziabad, Uttar Pradesh, India",
+    "email": "shenlong.codes@gmail.com",
     "education": {
-        "degree": "Bachelor of Technology in Computer Science",
-        "university": "Example University",
-        "duration": "2020 - 2024",
-        "gpa": "8.5/10",
+        "degree": "Bachelors in Computer Science & Engineering",
+        "university": "Roorkee Institute of Technology",
+        "duration": "Graduated: August 2025",
+        "gpa": "N/A",
         "highlights": [
-            "Specialized in Artificial Intelligence and Machine Learning",
-            "Led the university's coding club for 2 years",
-            "Won multiple hackathons and coding competitions",
-            "Published research paper on RAG systems"
+            "1st Place in University-Level Hackathon (CTF)",
+            "1st Place in University-Level Hackathon (Python/OpenCV)",
+            "Top 20 Global Rank in InCTF Internationals 2022"
         ]
     },
     "skills": {
         "languages": [
+            "JavaScript (ES6+)",
             "TypeScript",
-            "JavaScript",
-            "Python",
-            "Java",
-            "C++",
-            "SQL"
+            "Python"
         ],
         "frontend": [
-            "React",
-            "Next.js",
-            "Vue.js",
-            "Tailwind CSS",
-            "Framer Motion",
-            "shadcn/ui"
+            "React.js",
+            "Next.js"
         ],
         "backend": [
             "Node.js",
-            "Express.js",
-            "FastAPI",
-            "Django",
-            "PostgreSQL",
+            "Express",
             "MongoDB"
         ],
         "ai_ml": [
-            "TensorFlow",
-            "PyTorch",
-            "LangChain",
-            "RAG Systems",
-            "Gemini API",
-            "OpenAI API"
+            "Google Gemini API",
+            "RAG (Retrieval Augmented Generation)"
         ],
         "tools": [
-            "Git",
-            "Docker",
-            "Kubernetes",
-            "AWS",
-            "Vercel",
-            "Figma"
+            "Docker & Containerization",
+            "DigitalOcean",
+            "CI/CD (GitHub Actions)",
+            "Linux Administration"
         ],
         "soft_skills": [
             "Problem Solving",
-            "Team Leadership",
-            "Communication",
-            "Agile Methodologies"
+            "Team Collaboration"
         ]
     },
     "experience": [
         {
-            "role": "Software Engineering Intern",
-            "company": "TechCorp Inc.",
-            "duration": "May 2023 - August 2023",
-            "description": "Developed full-stack web applications using React and Node.js. Implemented RESTful APIs and optimized database queries, improving response times by 40%."
-        },
-        {
-            "role": "AI Research Assistant",
-            "company": "University AI Lab",
-            "duration": "January 2023 - April 2024",
-            "description": "Researched and implemented RAG (Retrieval Augmented Generation) systems. Built custom embedding pipelines and vector stores for knowledge retrieval."
-        },
-        {
-            "role": "Freelance Developer",
-            "company": "Self-Employed",
-            "duration": "2021 - Present",
-            "description": "Built websites and applications for small businesses and startups. Specialized in e-commerce solutions and AI integrations."
+            "role": "Full Stack Developer Intern",
+            "company": "Web Spider Solutions",
+            "duration": "Aug 2024 - Mar 2025",
+            "description": "Developed full-stack MERN applications for multiple clients and managed web hosting environments. Collaborated on release cycles using Git branching strategies to streamline workflows and ensure high uptime."
         }
     ],
     "projects": [
         {
-            "name": "AI Portfolio RAG Chat",
-            "description": "A premium portfolio website with an AI-powered chat interface that uses RAG to answer questions about my skills and experience. Built with Next.js, Tailwind CSS, and Gemini API.",
+            "name": "AI-Powered Personal Portfolio",
+            "description": "A premium AI portfolio web application that allows users to chat with a virtual assistant. Powered by RAG and Gemini, it dynamically retrieves my skills and experience to answer recruiter queries in real-time.",
             "technologies": [
                 "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "Gemini API",
-                "RAG"
+                "Python",
+                "Google Gemini API",
+                "RAG",
+                "Vector DB"
             ],
-            "link": "https://portfolio.vanshsharma.dev"
+            "link": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
         },
         {
-            "name": "SmartNote AI",
-            "description": "An intelligent note-taking application that uses AI to summarize, organize, and search notes. Features include voice-to-text, automatic categorization, and semantic search.",
+            "name": "Automated CI/CD Pipeline",
+            "description": "Architected a complete CI/CD pipeline to automatically build and deploy containerized applications. Integrated security scanning and multi-stage Docker builds for production-ready infrastructure.",
+            "technologies": [
+                "GitHub Actions",
+                "Docker",
+                "DigitalOcean"
+            ],
+            "link": "#"
+        },
+        {
+            "name": "Smart Bank Statement Dashboard",
+            "description": "An AI-powered financial dashboard that extracts data from bank statement PDFs. It visualizes monthly expenses, tracks spending trends, and provides automated insights using LLMs.",
             "technologies": [
                 "React",
                 "Node.js",
-                "OpenAI API",
-                "MongoDB",
-                "Vector Search"
+                "AI Data Extraction"
             ],
-            "link": "https://smartnote.example.com"
-        },
-        {
-            "name": "CodeBuddy",
-            "description": "A VS Code extension that provides AI-powered code suggestions, documentation generation, and bug detection. Used by over 5,000 developers.",
-            "technologies": [
-                "TypeScript",
-                "VS Code API",
-                "GPT-4",
-                "LangChain"
-            ],
-            "link": "https://marketplace.visualstudio.com/codebuddy"
-        },
-        {
-            "name": "EcoTrack",
-            "description": "A mobile-first web app that helps users track their carbon footprint and suggests eco-friendly alternatives. Features gamification and social sharing.",
-            "technologies": [
-                "React Native",
-                "Firebase",
-                "Node.js",
-                "Chart.js"
-            ],
-            "link": "https://ecotrack.example.com"
+            "link": "#"
         }
     ],
     "achievements": [
-        "Winner - National Level Hackathon 2023",
-        "Top 100 Developers on GitHub in India",
-        "Google Cloud Certified - Professional Cloud Architect",
-        "AWS Certified Solutions Architect",
-        "Published author - 'Building RAG Systems at Scale'"
+        "1st Place in University-Level Hackathon (CTF)",
+        "1st Place in University-Level Hackathon (Python/OpenCV)",
+        "Top 20 Global Rank in InCTF Internationals 2022"
     ],
     "interests": [
-        "Artificial Intelligence and Machine Learning",
-        "Open Source Development",
-        "UI/UX Design",
-        "Technical Writing",
-        "Competitive Programming"
+        "DevOps",
+        "Cloud Infrastructure",
+        "Generative AI",
+        "Web Development"
     ],
     "social": {
-        "github": "https://github.com/vanshsharma",
-        "linkedin": "https://linkedin.com/in/vanshsharma",
-        "twitter": "https://twitter.com/vanshsharma",
-        "website": "https://vanshsharma.dev"
+        "github": "https://github.com/ShenLongVansh",
+        "linkedin": "https://www.linkedin.com/in/vansh-sharma-4a6882245/",
+        "twitter": "",
+        "website": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
     }
 }

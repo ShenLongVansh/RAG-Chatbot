@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, KeyboardEvent } from "react";
+import { useState, useCallback, KeyboardEvent, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { RippleButton } from "@/components/RippleButton";
 
@@ -11,6 +11,7 @@ interface ChatInputProps {
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     const [input, setInput] = useState("");
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
 
     const handleSend = useCallback(() => {
         const trimmed = input.trim();
@@ -30,6 +31,31 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         [handleSend]
     );
 
+    // Auto-focus on typing
+    useEffect(() => {
+        const handleGlobalKeyDown = (e: globalThis.KeyboardEvent) => {
+            // Ignore if modifier keys are pressed
+            if (e.ctrlKey || e.altKey || e.metaKey) return;
+
+            // Ignore if focus is already on an input or textarea
+            if (
+                document.activeElement?.tagName === "INPUT" ||
+                document.activeElement?.tagName === "TEXTAREA" ||
+                document.activeElement?.hasAttribute("contenteditable")
+            ) {
+                return;
+            }
+
+            // Check if key is a printable character (length 1)
+            if (e.key.length === 1) {
+                textareaRef.current?.focus();
+            }
+        };
+
+        window.addEventListener("keydown", handleGlobalKeyDown);
+        return () => window.removeEventListener("keydown", handleGlobalKeyDown);
+    }, []);
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,6 +65,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         >
             <div className="glass rounded-xl md:rounded-2xl p-1.5 md:p-2 flex items-end gap-2 focus-within:ring-2 focus-within:ring-primary/20 transition-all duration-300" suppressHydrationWarning>
                 <textarea
+                    ref={textareaRef}
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
