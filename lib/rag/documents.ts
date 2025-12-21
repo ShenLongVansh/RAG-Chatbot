@@ -1,4 +1,5 @@
-import profileData from "@/lib/data/profile.json";
+import fs from 'fs';
+import path from 'path';
 
 export interface DocumentChunk {
     id: string;
@@ -9,12 +10,64 @@ export interface DocumentChunk {
     };
 }
 
+interface ProfileData {
+    name: string;
+    title: string;
+    bio: string;
+    location: string;
+    email: string;
+    education: {
+        degree: string;
+        university: string;
+        duration: string;
+        gpa: string;
+        highlights: string[];
+    };
+    skills: {
+        languages: string[];
+        frontend: string[];
+        backend: string[];
+        ai_ml: string[];
+        tools: string[];
+        soft_skills: string[];
+    };
+    experience: Array<{
+        role: string;
+        company: string;
+        duration: string;
+        description: string;
+    }>;
+    projects: Array<{
+        name: string;
+        description: string;
+        technologies: string[];
+        link: string;
+    }>;
+    achievements: string[];
+    interests: string[];
+    social: {
+        github: string;
+        linkedin: string;
+        twitter: string;
+        website: string;
+    };
+}
+
+/**
+ * Dynamically read profile data from disk (not cached by ESM)
+ */
+function getProfileData(): ProfileData {
+    const filePath = path.join(process.cwd(), 'lib/data/profile.json');
+    const data = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(data) as ProfileData;
+}
+
 /**
  * Prepare documents from profile data for embedding and retrieval
  */
 export function prepareDocuments(): DocumentChunk[] {
     const chunks: DocumentChunk[] = [];
-    const profile = profileData;
+    const profile = getProfileData();
 
     // Basic info
     chunks.push({

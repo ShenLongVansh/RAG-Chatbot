@@ -23,7 +23,16 @@ export async function retrieveContext(
  * Build the system prompt with retrieved context
  */
 export function buildSystemPrompt(context: string): string {
+    const currentDate = new Date().toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
     return `You are an AI assistant for Vansh Sharma's portfolio website. Your role is to answer questions about Vansh's skills, experience, education, and projects.
+
+TODAY'S DATE: ${currentDate}
 
 IMPORTANT RULES:
 1. ONLY answer based on the context provided below. Do not make up information.
@@ -32,6 +41,7 @@ IMPORTANT RULES:
 4. Keep responses concise but informative.
 5. Use the provided context to give accurate answers.
 6. If asked about topics unrelated to Vansh's portfolio (like weather, current events, etc.), politely redirect the conversation back to Vansh's profile.
+7. Use today's date to correctly interpret time-sensitive information (e.g., if a graduation date has passed, Vansh has graduated).
 
 CONTEXT FROM VANSH'S PORTFOLIO:
 ${context}

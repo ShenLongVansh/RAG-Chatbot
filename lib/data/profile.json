@@ -59,22 +59,11 @@
             "description": "A premium AI portfolio web application that allows users to chat with a virtual assistant. Powered by RAG and Gemini, it dynamically retrieves my skills and experience to answer recruiter queries in real-time.",
             "technologies": [
                 "Next.js",
-                "Python",
                 "Google Gemini API",
                 "RAG",
                 "Vector DB"
             ],
-            "link": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
-        },
-        {
-            "name": "Automated CI/CD Pipeline",
-            "description": "Architected a complete CI/CD pipeline to automatically build and deploy containerized applications. Integrated security scanning and multi-stage Docker builds for production-ready infrastructure.",
-            "technologies": [
-                "GitHub Actions",
-                "Docker",
-                "DigitalOcean"
-            ],
-            "link": "#"
+            "link": "https://vansh-rag-model.vercel.app/"
         },
         {
             "name": "Smart Bank Statement Dashboard",
@@ -85,6 +74,16 @@
                 "AI Data Extraction"
             ],
             "link": "#"
+        },
+        {
+            "name": "Automated CI/CD Pipeline",
+            "description": "Architected a complete CI/CD pipeline to automatically build and deploy containerized applications. Integrated security scanning and multi-stage Docker builds for production-ready infrastructure.",
+            "technologies": [
+                "GitHub Actions",
+                "Docker",
+                "DigitalOcean"
+            ],
+            "link": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
         }
     ],
     "achievements": [

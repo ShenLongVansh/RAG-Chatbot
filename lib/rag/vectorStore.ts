@@ -79,6 +79,16 @@ class VectorStore {
     }
 
     /**
+     * Reset the vector store to force re-initialization
+     */
+    reset(): void {
+        this.vectors = [];
+        this.initialized = false;
+        this.initPromise = null;
+        console.log("[VectorStore] Reset. Will re-initialize on next query.");
+    }
+
+    /**
      * Get the current status of the vector store
      */
     getStatus(): { initialized: boolean; vectorCount: number } {
@@ -97,6 +107,12 @@ export function getVectorStore(): VectorStore {
         vectorStoreInstance = new VectorStore();
     }
     return vectorStoreInstance;
+}
+
+export function resetVectorStore(): void {
+    if (vectorStoreInstance) {
+        vectorStoreInstance.reset();
+    }
 }
 
 export type { VectorStore };
