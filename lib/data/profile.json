@@ -76,14 +76,15 @@
             "link": "#"
         },
         {
-            "name": "Automated CI/CD Pipeline",
-            "description": "Architected a complete CI/CD pipeline to automatically build and deploy containerized applications. Integrated security scanning and multi-stage Docker builds for production-ready infrastructure.",
+            "name": "AI-Powered Bank Statement Analytics Dashboard",
+            "description": "A fintech-style analytics dashboard that transforms unstructured bank statement PDFs into clear, interactive financial insights. Leveraging LLM-based document understanding, the system extracts and semantically categorizes transactions to present monthly spending trends and visual breakdowns through a polished, UI-first dashboard.",
             "technologies": [
-                "GitHub Actions",
-                "Docker",
-                "DigitalOcean"
+                "Next.js",
+                "LLMs (Document Understanding)",
+                "PDF Processing",
+                "Data Visualization"
             ],
-            "link": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
+            "link": "#"
         }
     ],
     "achievements": [
