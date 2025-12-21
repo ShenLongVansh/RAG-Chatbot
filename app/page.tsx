@@ -226,7 +226,7 @@ export default function Home() {
 
             {/* GitHub link */}
             <a
-              href="https://github.com/vanshsharma"
+              href="https://github.com/ShenLongVansh/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:text-primary transition-colors"
@@ -245,7 +245,7 @@ export default function Home() {
 
             {/* LinkedIn link */}
             <a
-              href="https://linkedin.com/in/vanshsharma"
+              href="https://www.linkedin.com/in/vansh-sharma-4a6882245/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:text-primary transition-colors"
