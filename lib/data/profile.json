@@ -1,0 +1,155 @@
+{
+    "name": "Vansh Sharma",
+    "title": "Full Stack Developer & AI Enthusiast",
+    "bio": "I'm a passionate software developer with expertise in building modern web applications and AI-powered solutions. I love creating elegant, user-friendly experiences that solve real-world problems.",
+    "location": "India",
+    "email": "vansh@example.com",
+    "education": {
+        "degree": "Bachelor of Technology in Computer Science",
+        "university": "Example University",
+        "duration": "2020 - 2024",
+        "gpa": "8.5/10",
+        "highlights": [
+            "Specialized in Artificial Intelligence and Machine Learning",
+            "Led the university's coding club for 2 years",
+            "Won multiple hackathons and coding competitions",
+            "Published research paper on RAG systems"
+        ]
+    },
+    "skills": {
+        "languages": [
+            "TypeScript",
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++",
+            "SQL"
+        ],
+        "frontend": [
+            "React",
+            "Next.js",
+            "Vue.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "shadcn/ui"
+        ],
+        "backend": [
+            "Node.js",
+            "Express.js",
+            "FastAPI",
+            "Django",
+            "PostgreSQL",
+            "MongoDB"
+        ],
+        "ai_ml": [
+            "TensorFlow",
+            "PyTorch",
+            "LangChain",
+            "RAG Systems",
+            "Gemini API",
+            "OpenAI API"
+        ],
+        "tools": [
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "AWS",
+            "Vercel",
+            "Figma"
+        ],
+        "soft_skills": [
+            "Problem Solving",
+            "Team Leadership",
+            "Communication",
+            "Agile Methodologies"
+        ]
+    },
+    "experience": [
+        {
+            "role": "Software Engineering Intern",
+            "company": "TechCorp Inc.",
+            "duration": "May 2023 - August 2023",
+            "description": "Developed full-stack web applications using React and Node.js. Implemented RESTful APIs and optimized database queries, improving response times by 40%."
+        },
+        {
+            "role": "AI Research Assistant",
+            "company": "University AI Lab",
+            "duration": "January 2023 - April 2024",
+            "description": "Researched and implemented RAG (Retrieval Augmented Generation) systems. Built custom embedding pipelines and vector stores for knowledge retrieval."
+        },
+        {
+            "role": "Freelance Developer",
+            "company": "Self-Employed",
+            "duration": "2021 - Present",
+            "description": "Built websites and applications for small businesses and startups. Specialized in e-commerce solutions and AI integrations."
+        }
+    ],
+    "projects": [
+        {
+            "name": "AI Portfolio RAG Chat",
+            "description": "A premium portfolio website with an AI-powered chat interface that uses RAG to answer questions about my skills and experience. Built with Next.js, Tailwind CSS, and Gemini API.",
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Gemini API",
+                "RAG"
+            ],
+            "link": "https://portfolio.vanshsharma.dev"
+        },
+        {
+            "name": "SmartNote AI",
+            "description": "An intelligent note-taking application that uses AI to summarize, organize, and search notes. Features include voice-to-text, automatic categorization, and semantic search.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "OpenAI API",
+                "MongoDB",
+                "Vector Search"
+            ],
+            "link": "https://smartnote.example.com"
+        },
+        {
+            "name": "CodeBuddy",
+            "description": "A VS Code extension that provides AI-powered code suggestions, documentation generation, and bug detection. Used by over 5,000 developers.",
+            "technologies": [
+                "TypeScript",
+                "VS Code API",
+                "GPT-4",
+                "LangChain"
+            ],
+            "link": "https://marketplace.visualstudio.com/codebuddy"
+        },
+        {
+            "name": "EcoTrack",
+            "description": "A mobile-first web app that helps users track their carbon footprint and suggests eco-friendly alternatives. Features gamification and social sharing.",
+            "technologies": [
+                "React Native",
+                "Firebase",
+                "Node.js",
+                "Chart.js"
+            ],
+            "link": "https://ecotrack.example.com"
+        }
+    ],
+    "achievements": [
+        "Winner - National Level Hackathon 2023",
+        "Top 100 Developers on GitHub in India",
+        "Google Cloud Certified - Professional Cloud Architect",
+        "AWS Certified Solutions Architect",
+        "Published author - 'Building RAG Systems at Scale'"
+    ],
+    "interests": [
+        "Artificial Intelligence and Machine Learning",
+        "Open Source Development",
+        "UI/UX Design",
+        "Technical Writing",
+        "Competitive Programming"
+    ],
+    "social": {
+        "github": "https://github.com/vanshsharma",
+        "linkedin": "https://linkedin.com/in/vanshsharma",
+        "twitter": "https://twitter.com/vanshsharma",
+        "website": "https://vanshsharma.dev"
+    }
+}
