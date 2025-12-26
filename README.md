@@ -2,7 +2,7 @@
 
 A premium AI portfolio web application that lets users chat with an AI assistant powered by Gemini and RAG (Retrieval Augmented Generation).
 
-![AI Portfolio Chat](https://rag-chatbot-smoky.vercel.app/)
+![AI Portfolio Chat](https://vansh-rag-model.vercel.app/)
 
 ## ✨ Features
 
