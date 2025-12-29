@@ -9,10 +9,11 @@ interface SuggestionPanelProps {
 }
 
 const SUGGESTIONS = [
-    { emoji: "🛠️", text: "Skills", color: "from-blue-500 to-cyan-500", bubbleColor: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)" },
-    { emoji: "💼", text: "Experience", color: "from-purple-500 to-pink-500", bubbleColor: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)" },
-    { emoji: "📱", text: "Projects", color: "from-green-500 to-emerald-500", bubbleColor: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)" },
-    { emoji: "🎓", text: "Education", color: "from-orange-500 to-yellow-500", bubbleColor: "linear-gradient(135deg, #f97316 0%, #eab308 100%)" },
+    { emoji: "🛠️", text: "Skills", color: "from-blue-500 to-cyan-500", bubbleColor: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)", isDownload: false },
+    { emoji: "💼", text: "Experience", color: "from-purple-500 to-pink-500", bubbleColor: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)", isDownload: false },
+    { emoji: "📱", text: "Projects", color: "from-green-500 to-emerald-500", bubbleColor: "linear-gradient(135deg, #22c55e 0%, #10b981 100%)", isDownload: false },
+    { emoji: "🎓", text: "Education", color: "from-orange-500 to-yellow-500", bubbleColor: "linear-gradient(135deg, #f97316 0%, #eab308 100%)", isDownload: false },
+    { emoji: "📄", text: "Resume", color: "from-rose-500 to-red-500", bubbleColor: "linear-gradient(135deg, #f43f5e 0%, #ef4444 100%)", isDownload: true },
 ];
 
 const FULL_QUESTIONS: Record<string, string> = {
@@ -55,11 +56,22 @@ export function SuggestionPanel({ onSend, visible }: SuggestionPanelProps) {
 
         setClickedIndex(index);
 
-        // Send message after bubble animation
+        // After bubble animation - either download resume or send chat message
         setTimeout(() => {
-            onSend(FULL_QUESTIONS[suggestion.text]);
+            if (suggestion.isDownload) {
+                // Handle resume download
+                const link = document.createElement('a');
+                link.href = '/resume.pdf';
+                link.download = 'Vansh_Sharma_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                // Send chat message
+                onSend(FULL_QUESTIONS[suggestion.text]);
+            }
             setClickedIndex(null);
-        }, 400);
+        }, 700);
     };
 
     return (
@@ -114,8 +126,8 @@ export function SuggestionPanel({ onSend, visible }: SuggestionPanelProps) {
                             animate={{ scale: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{
-                                scale: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
-                                opacity: { duration: 0.2 }
+                                scale: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+                                opacity: { duration: 0.3 }
                             }}
                             className="fixed rounded-full pointer-events-none"
                             style={{
@@ -127,7 +139,7 @@ export function SuggestionPanel({ onSend, visible }: SuggestionPanelProps) {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ delay: 0.1, duration: 0.2 }}
+                            transition={{ delay: 0.15, duration: 0.3 }}
                             className="fixed inset-0 flex items-center justify-center pointer-events-none"
                             style={{ zIndex: 9999 }}
                         >

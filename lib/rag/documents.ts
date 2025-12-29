@@ -13,23 +13,23 @@ export interface DocumentChunk {
 interface ProfileData {
     name: string;
     title: string;
+    phone?: string;
     bio: string;
     location: string;
-    email: string;
+    email?: string;
     education: {
         degree: string;
         university: string;
+        location?: string;
         duration: string;
         gpa: string;
         highlights: string[];
     };
     skills: {
         languages: string[];
-        frontend: string[];
-        backend: string[];
-        ai_ml: string[];
-        tools: string[];
-        soft_skills: string[];
+        frameworks_web: string[];
+        ai_data: string[];
+        backend_cloud: string[];
     };
     experience: Array<{
         role: string;
@@ -41,6 +41,7 @@ interface ProfileData {
         name: string;
         description: string;
         technologies: string[];
+        duration?: string;
         link: string;
     }>;
     achievements: string[];
@@ -54,12 +55,20 @@ interface ProfileData {
 }
 
 /**
- * Dynamically read profile data from disk (not cached by ESM)
+ * Dynamically read profile data from disk and merge with env variables
+ * Sensitive data (phone, email) is loaded from environment variables
  */
 function getProfileData(): ProfileData {
     const filePath = path.join(process.cwd(), 'lib/data/profile.json');
     const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data) as ProfileData;
+    const profileFromFile = JSON.parse(data) as ProfileData;
+
+    // Merge sensitive data from environment variables
+    return {
+        ...profileFromFile,
+        phone: process.env.PROFILE_PHONE || profileFromFile.phone || '',
+        email: process.env.PROFILE_EMAIL || profileFromFile.email || '',
+    };
 }
 
 /**
@@ -93,27 +102,21 @@ export function prepareDocuments(): DocumentChunk[] {
     });
 
     chunks.push({
-        id: "skills-frontend",
-        content: `Frontend Technologies: ${skills.frontend.join(", ")}. These are the frontend frameworks and tools Vansh uses for building user interfaces.`,
-        metadata: { category: "skills", source: "frontend-stack" },
-    });
-
-    chunks.push({
-        id: "skills-backend",
-        content: `Backend Technologies: ${skills.backend.join(", ")}. These are the backend frameworks and databases Vansh works with.`,
-        metadata: { category: "skills", source: "backend-stack" },
+        id: "skills-frameworks",
+        content: `Frameworks & Web Technologies: ${skills.frameworks_web.join(", ")}. These are the frontend frameworks and tools Vansh uses for building user interfaces.`,
+        metadata: { category: "skills", source: "frameworks-web" },
     });
 
     chunks.push({
         id: "skills-ai",
-        content: `AI/ML Technologies: ${skills.ai_ml.join(", ")}. Vansh has experience with these AI and machine learning tools and frameworks.`,
-        metadata: { category: "skills", source: "ai-ml" },
+        content: `AI & Data Technologies: ${skills.ai_data.join(", ")}. Vansh has experience with these AI, data, and machine learning tools.`,
+        metadata: { category: "skills", source: "ai-data" },
     });
 
     chunks.push({
-        id: "skills-tools",
-        content: `Development Tools: ${skills.tools.join(", ")}. Soft Skills: ${skills.soft_skills.join(", ")}.`,
-        metadata: { category: "skills", source: "tools-and-soft-skills" },
+        id: "skills-backend-cloud",
+        content: `Backend & Cloud Technologies: ${skills.backend_cloud.join(", ")}. These are the backend, DevOps, and cloud tools Vansh works with.`,
+        metadata: { category: "skills", source: "backend-cloud" },
     });
 
     // Experience - one chunk per role
@@ -127,9 +130,10 @@ export function prepareDocuments(): DocumentChunk[] {
 
     // Projects - one chunk per project
     profile.projects.forEach((project, index) => {
+        const durationInfo = project.duration ? ` Duration: ${project.duration}.` : '';
         chunks.push({
             id: `project-${index}`,
-            content: `Project: ${project.name}. ${project.description} Technologies used: ${project.technologies.join(", ")}.`,
+            content: `Project: ${project.name}.${durationInfo} ${project.description} Technologies used: ${project.technologies.join(", ")}.`,
             metadata: { category: "projects", source: project.name },
         });
     });
@@ -148,11 +152,11 @@ export function prepareDocuments(): DocumentChunk[] {
         metadata: { category: "interests", source: "interests-list" },
     });
 
-    // Social links
+    // Social links and contact info
     const social = profile.social;
     chunks.push({
         id: "social",
-        content: `Contact and Social Links: GitHub: ${social.github}, LinkedIn: ${social.linkedin}, Twitter: ${social.twitter}, Website: ${social.website}, Email: ${profile.email}.`,
+        content: `Contact and Social Links: Phone: ${profile.phone}, Email: ${profile.email}, GitHub: ${social.github}, LinkedIn: ${social.linkedin}, Twitter: ${social.twitter}, Website: ${social.website}.`,
         metadata: { category: "contact", source: "social-links" },
     });
 

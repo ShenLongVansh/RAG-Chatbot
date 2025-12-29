@@ -1,107 +1,101 @@
 {
     "name": "Vansh Sharma",
     "title": "Full Stack Developer",
-    "bio": "I am a Full Stack Developer with a strong foundation in DevOps and Cloud Infrastructure. Currently bridging the gap between traditional web development and modern AI, I specialize in building intelligent applications using the MERN stack, Next.js, and Generative AI (RAG, Gemini). I have a proven track record of solving complex deployment challenges and winning university-level hackathons.",
+    "bio": "Innovative Full Stack Developer with experience building AI-powered web applications and scalable MERN stack solutions. Proficient in integrating Generative AI (Gemini, RAG) into modern web interfaces. Unique advantage in DevOps, enabling the design of secure, production-ready architectures with CI/CD pipelines. Passionate about solving complex data problems through intuitive dashboards and engaging user experiences.",
     "location": "Ghaziabad, Uttar Pradesh, India",
-    "email": "shenlong.codes@gmail.com",
     "education": {
         "degree": "Bachelors in Computer Science & Engineering",
         "university": "Roorkee Institute of Technology",
-        "duration": "Graduated: August 2025",
+        "location": "Roorkee",
+        "duration": "2021 – 2025",
         "gpa": "N/A",
         "highlights": [
-            "1st Place in University-Level Hackathon (CTF)",
-            "1st Place in University-Level Hackathon (Python/OpenCV)",
-            "Top 20 Global Rank in InCTF Internationals 2022"
+            "1st Place Winner in two University-Level Hackathons (CTF & Python/OpenCV challenge)",
+            "1st (College) & 17th (Worldwide) in InCTF Internationals 2022"
         ]
     },
     "skills": {
         "languages": [
             "JavaScript (ES6+)",
             "TypeScript",
-            "Python"
+            "Python",
+            "SQL"
         ],
-        "frontend": [
-            "React.js",
-            "Next.js"
-        ],
-        "backend": [
+        "frameworks_web": [
+            "Next.js (App Router)",
+            "React",
             "Node.js",
-            "Express",
-            "MongoDB"
+            "Tailwind CSS",
+            "Framer Motion"
         ],
-        "ai_ml": [
+        "ai_data": [
             "Google Gemini API",
-            "RAG (Retrieval Augmented Generation)"
+            "RAG (Vector Embeddings)",
+            "LangChain",
+            "Recharts"
         ],
-        "tools": [
-            "Docker & Containerization",
-            "DigitalOcean",
-            "CI/CD (GitHub Actions)",
-            "Linux Administration"
-        ],
-        "soft_skills": [
-            "Problem Solving",
-            "Team Collaboration"
+        "backend_cloud": [
+            "Supabase (PostgreSQL/Auth)",
+            "Docker",
+            "GitHub Actions",
+            "Railway",
+            "Linux"
         ]
     },
     "experience": [
         {
             "role": "Full Stack Developer Intern",
             "company": "Web Spider Solutions",
-            "duration": "Aug 2024 - Mar 2025",
-            "description": "Developed full-stack MERN applications for multiple clients and managed web hosting environments. Collaborated on release cycles using Git branching strategies to streamline workflows and ensure high uptime."
+            "location": "Noida",
+            "duration": "Aug 2024 – Mar 2025",
+            "description": "Delivered full-stack web applications for diverse clients using the MERN Stack (MongoDB, Express, React, Node.js), ensuring responsive and user-friendly designs. Collaborated with cross-functional teams to streamline release cycles using Git branching strategies, reducing code conflicts by 20%. Managed web hosting environments and deployed client applications, ensuring high availability and rapid troubleshooting of production issues."
         }
     ],
     "projects": [
         {
-            "name": "AI-Powered Personal Portfolio",
-            "description": "A premium AI portfolio web application that allows users to chat with a virtual assistant. Powered by RAG and Gemini, it dynamically retrieves my skills and experience to answer recruiter queries in real-time.",
+            "name": "FinSight - AI-Powered Bank Statement Analytics",
+            "description": "Architected a modern fintech dashboard that automates financial tracking by transforming bank statement PDFs into actionable insights. Integrated Google Gemini 2.5 Flash to parse and categorize complex transaction data. Built a secure backend using Supabase (PostgreSQL + Auth) for Google OAuth and encrypted passwords for PDF. Developed an interactive frontend with TypeScript and Recharts to visualize spending trends, deployed via Docker on Railway.",
             "technologies": [
                 "Next.js",
+                "Supabase",
+                "Google Gemini Flash",
+                "TypeScript",
+                "Recharts",
+                "Docker",
+                "Railway"
+            ],
+            "duration": "Oct – Nov 2025",
+            "link": "https://finsight-ai-powered-fintech-analytics-dashboard-production.up.railway.app/"
+        },
+        {
+            "name": "AI Portfolio RAG (Retrieval Augmented Generation)",
+            "description": "Engineered a conversational portfolio site that uses RAG to allow recruiters to chat with a 'virtual version' of my professional profile. Implemented an in-memory vector store using cosine similarity to retrieve relevant JSON context (skills, experience) for the Gemini API. Designed a premium 'Glassmorphism' UI using shadcn/ui and Framer Motion, featuring real-time streaming responses for a seamless user experience.",
+            "technologies": [
+                "Next.js",
+                "Tailwind",
+                "Vector Embedding",
                 "Google Gemini API",
-                "RAG",
-                "Vector DB"
+                "shadcn/ui",
+                "Framer Motion"
             ],
+            "duration": "Nov – Dec 2025",
             "link": "https://vansh-rag-model.vercel.app/"
-        },
-        {
-            "name": "Smart Bank Statement Dashboard",
-            "description": "An AI-powered financial dashboard that extracts data from bank statement PDFs. It visualizes monthly expenses, tracks spending trends, and provides automated insights using LLMs.",
-            "technologies": [
-                "React",
-                "Node.js",
-                "AI Data Extraction"
-            ],
-            "link": "#"
-        },
-        {
-            "name": "AI-Powered Bank Statement Analytics Dashboard",
-            "description": "A fintech-style analytics dashboard that transforms unstructured bank statement PDFs into clear, interactive financial insights. Leveraging LLM-based document understanding, the system extracts and semantically categorizes transactions to present monthly spending trends and visual breakdowns through a polished, UI-first dashboard.",
-            "technologies": [
-                "Next.js",
-                "LLMs (Document Understanding)",
-                "PDF Processing",
-                "Data Visualization"
-            ],
-            "link": "#"
         }
     ],
     "achievements": [
-        "1st Place in University-Level Hackathon (CTF)",
-        "1st Place in University-Level Hackathon (Python/OpenCV)",
-        "Top 20 Global Rank in InCTF Internationals 2022"
+        "1st Place Winner in two University-Level Hackathons (CTF & Python/OpenCV challenge)",
+        "1st (College) & 17th (Worldwide) in InCTF Internationals 2022"
     ],
     "interests": [
         "DevOps",
         "Cloud Infrastructure",
         "Generative AI",
-        "Web Development"
+        "Full Stack Web Development"
     ],
     "social": {
         "github": "https://github.com/ShenLongVansh",
         "linkedin": "https://www.linkedin.com/in/vansh-sharma-4a6882245/",
         "twitter": "",
-        "website": "https://portfolio-five-lemon-yoqaqn1pf0.vercel.app"
+        "website": "https://vansharma-portfolio.vercel.app/"
     }
 }
