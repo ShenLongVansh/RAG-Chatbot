@@ -29,7 +29,7 @@ interface ProfileData {
         languages: string[];
         frameworks_web: string[];
         ai_data: string[];
-        backend_cloud: string[];
+        devops_cloud: string[];
     };
     experience: Array<{
         role: string;
@@ -115,7 +115,7 @@ export function prepareDocuments(): DocumentChunk[] {
 
     chunks.push({
         id: "skills-backend-cloud",
-        content: `Backend & Cloud Technologies: ${skills.backend_cloud.join(", ")}. These are the backend, DevOps, and cloud tools Vansh works with.`,
+        content: `Backend & Cloud Technologies: ${skills.devops_cloud.join(", ")}. These are the backend, DevOps, and cloud tools Vansh works with.`,
         metadata: { category: "skills", source: "backend-cloud" },
     });
 

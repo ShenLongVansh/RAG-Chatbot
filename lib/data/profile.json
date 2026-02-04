@@ -1,7 +1,7 @@
 {
     "name": "Vansh Sharma",
-    "title": "Full Stack Developer",
-    "bio": "Innovative Full Stack Developer with experience building AI-powered web applications and scalable MERN stack solutions. Proficient in integrating Generative AI (Gemini, RAG) into modern web interfaces. Unique advantage in DevOps, enabling the design of secure, production-ready architectures with CI/CD pipelines. Passionate about solving complex data problems through intuitive dashboards and engaging user experiences.",
+    "title": "DevOps Engineer & Full Stack Developer",
+    "bio": "DevOps Engineer and Full Stack Developer with hands-on experience in cloud infrastructure, CI/CD automation, and building AI-powered web applications. Currently working on Azure VM migrations, Linux server management, and production deployment automation. Proficient in containerization with Docker, MLOps pipelines, and integrating Generative AI (Gemini, RAG) into modern web interfaces. Passionate about designing secure, scalable, production-ready architectures and solving complex data problems through intuitive dashboards.",
     "location": "Ghaziabad, Uttar Pradesh, India",
     "education": {
         "degree": "Bachelors in Computer Science & Engineering",
@@ -19,12 +19,14 @@
             "JavaScript (ES6+)",
             "TypeScript",
             "Python",
-            "SQL"
+            "SQL",
+            "Bash"
         ],
         "frameworks_web": [
             "Next.js (App Router)",
             "React",
             "Node.js",
+            "FastAPI",
             "Tailwind CSS",
             "Framer Motion"
         ],
@@ -32,17 +34,30 @@
             "Google Gemini API",
             "RAG (Vector Embeddings)",
             "LangChain",
+            "MLOps",
             "Recharts"
         ],
-        "backend_cloud": [
-            "Supabase (PostgreSQL/Auth)",
+        "devops_cloud": [
+            "Azure (Virtual Machines)",
+            "DigitalOcean",
             "Docker",
-            "GitHub Actions",
+            "Docker Compose",
+            "GitHub Actions (CI/CD)",
+            "systemd",
+            "Linux Server Administration",
             "Railway",
-            "Linux"
+            "Supabase (PostgreSQL/Auth)",
+            "PyTest"
         ]
     },
     "experience": [
+        {
+            "role": "DevOps Engineer Intern",
+            "company": "VyntraPro Innovations",
+            "location": "Gurugram, Haryana, India",
+            "duration": "Jan 2026 – Present",
+            "description": "Migrated an on-premises backend application to an Azure Virtual Machine, ensuring successful deployment and service continuity. Automated backend application startup and monitoring using systemd services on Linux. Configured and managed Linux server environments for backend workloads. Assisted in improving deployment reliability and operational stability. Worked closely with backend and infrastructure components in a production-like environment."
+        },
         {
             "role": "Full Stack Developer Intern",
             "company": "Web Spider Solutions",
@@ -52,6 +67,25 @@
         }
     ],
     "projects": [
+        {
+            "name": "Deepfake Detection & MLOps System (VoiceGuardAI)",
+            "description": "Architected an end-to-end MLOps pipeline for a custom AI media verification platform. Built a FastAPI-based inference API with endpoints for health checks and deepfake detection via URL or file upload. Integrated a pre-trained Hugging Face model deployed externally on the server for independent model updates. Created a lightweight Next.js/HTML frontend for real-time deepfake analysis. Containerized the entire workload with Docker and implemented a fully automated GitHub Actions CI/CD workflow that runs PyTest tests, builds Docker images, pushes to Docker Hub, and deploys automatically to DigitalOcean via SSH with zero manual steps.",
+            "technologies": [
+                "Python",
+                "FastAPI",
+                "Docker",
+                "Docker Compose",
+                "GitHub Actions",
+                "PyTest",
+                "DigitalOcean",
+                "Next.js",
+                "MLOps",
+                "CI/CD",
+                "Linux"
+            ],
+            "duration": "Dec 2025",
+            "link": "https://github.com/ShenLongVansh/Deepfake-CI-CD"
+        },
         {
             "name": "FinSight - AI-Powered Bank Statement Analytics",
             "description": "Architected a modern fintech dashboard that automates financial tracking by transforming bank statement PDFs into actionable insights. Integrated Google Gemini 2.5 Flash to parse and categorize complex transaction data. Built a secure backend using Supabase (PostgreSQL + Auth) for Google OAuth and encrypted passwords for PDF. Developed an interactive frontend with TypeScript and Recharts to visualize spending trends, deployed via Docker on Railway.",
@@ -89,6 +123,7 @@
     "interests": [
         "DevOps",
         "Cloud Infrastructure",
+        "MLOps",
         "Generative AI",
         "Full Stack Web Development"
     ],
